@@ -1,10 +1,9 @@
 import useEmblaCarousel from "embla-carousel-react";
-import { heroImgaes } from "../localData";
+
 import Autoplay from "embla-carousel-autoplay";
 
 export function EmblaCarousel() {
-  //   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
-  const [emblaRef] = useEmblaCarousel();
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
 
   return (
     <div className="embla border-2 border-red-600 h-full w-full" ref={emblaRef}>
@@ -35,7 +34,7 @@ export function EmblaCarousel() {
           </section>
           <section className=" absolute w-full border-2 h-fit border-red-500 p-2 flex flex-col items-center justify-center sm:w-[600px] md:[600px]  md:left-32">
             <h1 className=" text-6xl uppercase text-center sm:text-7xl md:text-left md:text-8xl">
-              create professional cocktails
+              Craft pro cocktails
             </h1>
             <button className="md:mr-auto bg-white">View Collection</button>
           </section>
