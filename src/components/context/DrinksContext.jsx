@@ -14,7 +14,32 @@ export const DrinksProvider = ({ children }) => {
           "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
         );
         const data = await response.json();
-        setDrinks(data.drinks);
+        const formattedDrinks = data.drinks.map((drink) => {
+          // Create an array of ingredients with their corresponding measurements
+          const ingredients = [];
+          for (let i = 1; i <= 15; i++) {
+            const ingredient = drink[`strIngredient${i}`];
+            const measure = drink[`strMeasure${i}`];
+            if (ingredient) {
+              ingredients.push({ ingredient, measure: measure || "" });
+            }
+          }
+
+          // Create an array of instructions (assuming instructions might be split in the future)
+          const instructions = drink.strInstructions
+            ? drink.strInstructions
+            : "";
+
+          // Return the formatted drink object
+          return {
+            name: drink.strDrink,
+            ingredients,
+            instructions,
+            thumbnail: drink.strDrinkThumb,
+          };
+        });
+
+        setDrinks(formattedDrinks);
       } catch (error) {
         console.error("Error fetching drinks:", error);
         setError("Error with fetching drinks");
