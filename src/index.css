@@ -2,12 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@layer components {
+  h1 {
+    color: white;
+  }
+}
 .embla {
-    overflow: hidden;
-  }
-  .embla__container {
-    display: flex;
-  }
-
-  
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
