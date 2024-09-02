@@ -2,22 +2,38 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 import { useState, useRef } from "react";
 import Slide from "@mui/material/Slide";
+import { useEffect } from "react";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const containerRef = useRef(null);
   console.log(toggle);
-  const [imageSrc, setImageSrc] = useState("/menu/6.jpg"); // Default image
-
+  const [imageSrc, setImageSrc] = useState("/menu/6.jpg");
+  const [isScrolled, setIsScrolled] = useState(false);
   const handleImageChange = (src) => {
     setImageSrc(src);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      setIsScrolled(scrollTop > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <section className="">
       <section
-        className="fixed z-50 border-2 w-full h-[15vh]  flex justify-between p-5 items-center sm:px-7 md:p-14 lg:p-14 "
-        ref={containerRef}
+        className={`fixed z-50 w-full h-[15vh] flex justify-between p-5 items-center sm:px-7 md:p-14 lg:p-14 transition-colors duration-300 ${
+          isScrolled ? "bg-[#173e59] " : "bg-transparent"
+        }`}
       >
         <section className="w-[150px]">
           <img
