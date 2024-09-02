@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
+import { useDrinks } from '../context/DrinksContext';
 
 const ProductSection = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false, align: 'center' });
@@ -22,6 +23,9 @@ const ProductSection = () => {
     emblaApi.on('reInit', onSelect);
   }, [emblaApi]);
 
+
+  const { drinks } = useDrinks();
+
   return (
     <div className="w-full h-screen pt-[100px] pb-[20px] text-[#002B49]">
       <div className="font-bold md:text-6xl text-5xl flex flex-wrap justify-between gap-10 items-center">
@@ -32,7 +36,21 @@ const ProductSection = () => {
       </div>
 
       <div className="embla w-full overflow-hidden relative pt-[80px] justify-between gap-5" ref={emblaRef}>
-        <div className="embla__container grid-cols-3 gap-10 ">
+
+      <div className="embla__container grid-cols-3 gap-10 ">
+      {drinks.slice(0, 4).map((drink, index) => (
+
+  <div key={index} className="h-[60vh]">
+    <img src={drink.thumbnail} alt="image" className="md:max-w-[500px] max-w-[300px] md:h-[50vh] h-[50vh] object-cover" />
+    <div className="pt-6 text-start text-gray-600">
+      <h2 className="font-light text-lg uppercase text-gray-600">ORIGINAL</h2>
+      <h1 className="font-bold text-3xl mt-1 uppercase text-gray-600">{drink.name}</h1>
+    </div>
+  </div>
+))}
+
+
+        {/* <div className="embla__container grid-cols-3 gap-10 ">
 
           <div className="h-[60vh]">
             <img src="hero/2.jpg" alt="Piana" className="md:max-w-[500px] max-w-[300px] md:h-[50vh] h-[50vh] object-cover" />
@@ -64,9 +82,9 @@ const ProductSection = () => {
               <h2 className="font-light text-lg uppercase text-gray-600">ORIGINAL</h2>
               <h1 className="font-bold text-3xl mt-1 uppercase  text-gray-600">PIANA</h1>
             </div>
-          </div>
+          </div> */}
 
-          {/* Add more slides as needed */}
+       
         </div>
 
         <button
