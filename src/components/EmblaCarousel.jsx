@@ -1,10 +1,9 @@
 import useEmblaCarousel from "embla-carousel-react";
-import { heroImgaes } from "../localData";
+
 import Autoplay from "embla-carousel-autoplay";
 
 export function EmblaCarousel() {
-  //   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
-  const [emblaRef] = useEmblaCarousel();
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
 
   return (
     <div className="embla border-2 border-red-600 h-full w-full" ref={emblaRef}>
