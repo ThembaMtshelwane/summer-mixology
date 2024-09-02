@@ -10,10 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "embla-carousel-autoplay": "^8.2.0",
-=======
->>>>>>> 8bbd9b8f6c7fedfea21a9580a9004fc138f0a185
     "embla-carousel-react": "^8.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
