@@ -23,7 +23,7 @@ const ProductSection = () => {
   }, [emblaApi]);
 
   return (
-    <div className="w-full h-screen pt-[100px] text-[#002B49]">
+    <div className="w-full h-screen pt-[100px] pb-[20px] text-[#002B49]">
       <div className="font-bold md:text-6xl text-5xl flex flex-wrap justify-between gap-10 items-center">
         <h2 className="">OUR COCKTAILS</h2>
         <button className="bg-transparent w-[200px] h-[45px] border border-[#002B49] text-base hover:bg-[#002B49] hover:text-white font-medium">
@@ -32,37 +32,37 @@ const ProductSection = () => {
       </div>
 
       <div className="embla w-full overflow-hidden relative pt-[80px] justify-between gap-5" ref={emblaRef}>
-        <div className="embla__container flex gap-10 ">
+        <div className="embla__container grid-cols-3 gap-10 ">
 
-          <div className="embla__slide ">
-            <img src="hero/2.jpg" alt="Piana" className="max-w-[500px] max-h-[600px] object-cover" />
-            <div className="pt-6 text-start">
+          <div className="h-[60vh]">
+            <img src="hero/2.jpg" alt="Piana" className="md:max-w-[500px] max-w-[300px] md:h-[50vh] h-[50vh] object-cover" />
+            <div className="pt-6 text-start  text-gray-600">
               <h2 className="font-light text-lg uppercase text-gray-600">ORIGINAL</h2>
-              <h1 className="font-bold text-3xl mt-1 uppercase">PIANA</h1>
+              <h1 className="font-bold text-3xl mt-1 uppercase  text-gray-600">PIANA</h1>
             </div>
           </div>
 
-          <div className="embla__slide">
-            <img src="hero/2.jpg" alt="Piana" className="max-w-[500px] max-h-[600px] object-cover" />
+          <div className="">
+          <img src="hero/2.jpg" alt="Piana" className="md:max-w-[500px] max-w-[300px] md:h-[50vh] h-[50vh] object-cover" />
             <div className="pt-6 text-start">
               <h2 className="font-light text-lg uppercase text-gray-600">ORIGINAL</h2>
-              <h1 className="font-bold text-3xl mt-1 uppercase">PIANA</h1>
+              <h1 className="font-bold text-3xl mt-1 uppercase  text-gray-600">PIANA</h1>
             </div>
           </div>
 
-          <div className="embla__slide">
-            <img src="hero/2.jpg" alt="Piana" className="max-w-[500px] max-h-[600px] object-cover" />
+          <div className="">
+          <img src="hero/2.jpg" alt="Piana" className="md:max-w-[500px] max-w-[300px] md:h-[50vh] h-[50vh] object-cover" />
             <div className="pt-6 text-start">
               <h2 className="font-light text-lg uppercase text-gray-600">ORIGINAL</h2>
-              <h1 className="font-bold text-3xl mt-1 uppercase">PIANA</h1>
+              <h1 className="font-bold text-3xl mt-1 uppercase  text-gray-600">PIANA</h1>
             </div>
           </div>
 
-          <div className="embla__slide">
-            <img src="hero/2.jpg" alt="Piana" className="max-w-[500px] max-h-[600px] object-cover" />
+          <div className="">
+          <img src="hero/2.jpg" alt="Piana" className="md:max-w-[500px] max-w-[300px] md:h-[50vh] h-[50vh] object-cover" />
             <div className="pt-6 text-start">
               <h2 className="font-light text-lg uppercase text-gray-600">ORIGINAL</h2>
-              <h1 className="font-bold text-3xl mt-1 uppercase">PIANA</h1>
+              <h1 className="font-bold text-3xl mt-1 uppercase  text-gray-600">PIANA</h1>
             </div>
           </div>
 
