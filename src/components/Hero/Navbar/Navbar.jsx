@@ -41,7 +41,7 @@ const Navbar = () => {
       >
         <Link to="/" className="w-[150px]" onClick={() => setToggle(false)}>
           <img
-            src="/logo/3270.svg"
+            src="/logo/logo.svg"
             alt=""
             className="w-full h-full object-cover object-center scale-[0.8]"
           />
