@@ -12,6 +12,7 @@ import ProductsLayout from "./layouts/ProductsLayout";
 import CollectionsPage from "./pages/CollectionsPage";
 import ProductDetails from "./components/ProductSection/ProductDetails";
 
+
 export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(

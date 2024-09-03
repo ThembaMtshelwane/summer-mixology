@@ -31,7 +31,7 @@ const Footer = () => {
 
       {/* Footer Bottom Section */}
       <div className="bg-gray-200 text-center p-4">
-        © 2021 Copyright:
+        © 2024 Copyright:
         <a href="" className="text-[#002B49] hover:text-gray-900 font-semibold">
           summermixiology.com
         </a>
