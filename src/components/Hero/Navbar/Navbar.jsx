@@ -34,7 +34,9 @@ const Navbar = () => {
       <section
         className={`fixed z-50 w-full h-[15vh] flex justify-between p-5 items-center sm:px-7 md:p-14 lg:p-14 transition-colors duration-300 ${
           toggle ? "bg-transparent" : ""
-        } ${isScrolled ? "bg-[#173e59] " : "bg-transparent"}`}
+        } 
+        ${isScrolled ? "bg-[#173e59] " : "bg-transparent"}
+        `}
       >
         <section className="w-[150px]">
           <img

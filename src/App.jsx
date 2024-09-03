@@ -22,13 +22,10 @@ export default function App() {
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />
-        <Route path="/product/:name" element={<ProductDetails />} />
 
-        <Route path="/" element={<MainLayout />}>
-          <Route index element={<HomePage />} />
-        </Route>
         <Route path="/products" element={<ProductsLayout />}>
           <Route index element={<CollectionsPage />} />
+          <Route path="/products/:name" element={<ProductDetails />} />
         </Route>
       </Route>
     )
