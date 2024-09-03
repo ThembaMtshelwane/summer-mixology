@@ -12,6 +12,14 @@ const CollectionsPage = () => {
         </h1>
       </section>
 
+      <section className="absolute  h-[200vh]  w-full z-[-999] opacity-20">
+        <img src="/background/1.png" alt="" />
+        <img src="/background/2.png" alt="" />
+        <img src="/background/3.png" alt="" />
+        <img src="/background/4.png" alt="" />
+        <img src="/background/5.png" alt="" />
+        <img src="/background/6.png" alt="" />
+      </section>
       <section className="border-2 border-red-600 min-h-screen grid gap-10 justify-center py-20 sm:px-5 sm:grid-cols-2 ">
         {drinks.slice(0, 6).map((drink, index) => (
           <Link
