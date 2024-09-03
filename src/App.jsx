@@ -19,6 +19,12 @@ import CollectionsPage from "./pages/CollectionsPage";
 export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
+<<<<<<< HEAD
+      <Route path="/" element={<MainLayout />}>
+        <Route index element={<HomePage />} />
+        <Route path="/product/:name" element={<ProductDetails />} />
+        
+=======
       <Route>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePage />} />
@@ -26,6 +32,7 @@ export default function App() {
         <Route path="/products" element={<ProductsLayout />}>
           <Route index element={<CollectionsPage />} />
         </Route>
+>>>>>>> 2a1577a0776ee4cefd8f05cc7e4fabd9dc54946b
       </Route>
     )
   );
