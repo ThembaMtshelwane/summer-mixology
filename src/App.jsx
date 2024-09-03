@@ -4,6 +4,7 @@ import Hero from "./components/Hero/Hero";
 import ProductSection from "./components/ProductSection/ProductSection";
 import Footer from "./components/Footer/Footer";
 
+
 export default function App() {
   return (
     <section>
@@ -11,6 +12,7 @@ export default function App() {
         <Hero />
         <section className="mx-[30px]">
           <About />
+         
           <ProductSection />
         </section>
       </DrinksProvider>

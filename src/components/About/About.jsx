@@ -44,7 +44,7 @@ const About = () => {
             <img
               src="/About.jpeg"
               alt="About Us"
-              className="w-[100%] h-[100vh] object-cover shadow-lg"  // Increased height for better visibility
+              className="w-[100%] h-[100vh] object-cover shadow-lg mt-5"  // Increased height for better visibility
             />
           </div>
 
@@ -83,11 +83,11 @@ const About = () => {
               {Object.keys(cocktails).map(category => (
                 <div key={category}>
                   <h2 className="text-2xl font-bold mb-4 text-[#002B49]">{category}</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10 ">
                     {cocktails[category].map((cocktail) => (
                       <div key={cocktail.idDrink} className="p-4 border rounded-lg shadow-lg">
                         <h3 className="text-xl font-bold mb-2">{cocktail.strDrink}</h3>
-                        <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} className="w-full h-40 object-cover mb-4 rounded-md" />
+                        <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} className="w-full h-45 object-cover mb-4 rounded-md" />
                         <h4 className="text-lg font-bold mb-2">Ingredients:</h4>
                         <ul className="text-left mb-4">
                           {Object.keys(cocktail)
