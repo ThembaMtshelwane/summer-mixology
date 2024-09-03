@@ -15,24 +15,21 @@ import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
 import ProductsLayout from "./layouts/ProductsLayout";
 import CollectionsPage from "./pages/CollectionsPage";
+import ProductDetails from "./components/ProductSection/ProductDetails";
 
 export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-<<<<<<< HEAD
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />
         <Route path="/product/:name" element={<ProductDetails />} />
-        
-=======
-      <Route>
+
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePage />} />
         </Route>
         <Route path="/products" element={<ProductsLayout />}>
           <Route index element={<CollectionsPage />} />
         </Route>
->>>>>>> 2a1577a0776ee4cefd8f05cc7e4fabd9dc54946b
       </Route>
     )
   );
