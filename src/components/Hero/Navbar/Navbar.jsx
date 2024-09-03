@@ -39,11 +39,7 @@ const Navbar = () => {
         ${isScrolled ? "bg-[#173e59] " : "bg-transparent"}
         `}
       >
-        <Link
-          to="/"
-          className="w-[150px]"
-          onClick={() => setToggle((prevState) => !prevState)}
-        >
+        <Link to="/" className="w-[150px]" onClick={() => setToggle(false)}>
           <img
             src="/logo/3270.svg"
             alt=""
