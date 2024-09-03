@@ -1,5 +1,5 @@
 import useEmblaCarousel from "embla-carousel-react";
-
+import { Link } from "react-router-dom";
 import Autoplay from "embla-carousel-autoplay";
 
 export function EmblaCarousel() {
@@ -21,7 +21,7 @@ export function EmblaCarousel() {
               the art of the cocktail
             </h1>
             <button className="md:ml-auto my-4 bg-white border-none">
-              View Collection
+              <Link to="/products"> View Collection</Link>
             </button>
           </section>
         </div>
@@ -39,7 +39,7 @@ export function EmblaCarousel() {
               Craft pro cocktails
             </h1>
             <button className="md:mr-auto my-4 bg-white border-none">
-              View Collection
+              <Link to="/categories"> View Categories</Link>
             </button>
           </section>
         </div>
@@ -57,7 +57,7 @@ export function EmblaCarousel() {
               from zero to the new bar hero
             </h1>
             <button className="md:mr-auto my-4 bg-white border-none">
-              View Collection
+              <Link to="/products"> View Collection</Link>
             </button>
           </section>
         </div>
