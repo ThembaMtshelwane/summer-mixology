@@ -31,7 +31,7 @@ export default function App() {
   );
   return (
     <DrinksProvider>
-      <RouterProvider router={router} />;
+      <RouterProvider router={router} />
     </DrinksProvider>
   );
 }
