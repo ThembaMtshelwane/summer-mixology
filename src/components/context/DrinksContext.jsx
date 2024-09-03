@@ -33,6 +33,7 @@ export const DrinksProvider = ({ children }) => {
           // Return the formatted drink object
           return {
             name: drink.strDrink,
+            category: drink.strCategory,
             ingredients,
             instructions,
             thumbnail: drink.strDrinkThumb,
