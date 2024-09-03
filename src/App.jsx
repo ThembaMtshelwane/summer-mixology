@@ -14,6 +14,8 @@ export default function App() {
           <ProductSection />
         </section>
       </DrinksProvider>
+      <Footer/>
     </section>
+
   );
 }
