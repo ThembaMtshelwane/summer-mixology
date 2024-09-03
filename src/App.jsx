@@ -27,6 +27,8 @@ export default function App() {
           <Route index element={<CollectionsPage />} />
           <Route path="/products/:name" element={<ProductDetails />} />
         </Route>
+
+        <Route path="/product/:name" element={<ProductDetails />} />
       </Route>
     )
   );
