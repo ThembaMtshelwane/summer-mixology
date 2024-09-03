@@ -63,32 +63,36 @@ const Navbar = () => {
         className="fixed left-0 top-0 h-screen bg-[#173e59]  w-full z-40 "
       >
         <section className=" border-2 border-yellow-600">
-          <section className="flex flex-col h-[85vh] border-[5px] border-red-500  mt-[15vh]">
+          <section className="flex flex-col max-h-[85vh] border-[5px] border-red-500  mt-[15vh]">
             <section className="border-2 border-blue-500 h-[85vh] flex flex-col items-center relative justify-center sm:flex-row">
               <ul className="border-2 border-green-600 h-[100%] w-full flex flex-col justify-center items-center z-20 sm:w-[50%]">
                 <li
                   className="border-2 text-center py-5 mb-5 text-4xl text-white hover:scale-105 w-[80%] cursor-pointer"
-                  onClick={() => handleImageChange("/menu/4.jpg")}
+                  onMouseEnter={() => handleImageChange("/menu/4.jpg")}
+                  onClick={() => setToggle(false)}
                 >
-                  Popular
+                  Welcome
                 </li>
                 <li
                   className="border-2 text-center py-5 mb-5 text-4xl text-white hover:scale-105 w-[80%] cursor-pointer"
-                  onClick={() => handleImageChange("/menu/3.jpg")}
+                  onMouseEnter={() => handleImageChange("/menu/3.jpg")}
+                  onClick={() => setToggle(false)}
+                >
+                  All Cocktails
+                </li>
+                <li
+                  className="border-2 text-center py-5 mb-5 text-4xl text-white hover:scale-105 w-[80%] cursor-pointer"
+                  onMouseEnter={() => handleImageChange("/menu/1.jpg")}
+                  onClick={() => setToggle(false)}
                 >
                   Categories
                 </li>
                 <li
                   className="border-2 text-center py-5 mb-5 text-4xl text-white hover:scale-105 w-[80%] cursor-pointer"
-                  onClick={() => handleImageChange("/menu/1.jpg")}
+                  onMouseEnter={() => handleImageChange("/menu/2.jpg")}
+                  onClick={() => setToggle(false)}
                 >
-                  Recipes
-                </li>
-                <li
-                  className="border-2 text-center py-5 mb-5 text-4xl text-white hover:scale-105 w-[80%] cursor-pointer"
-                  onClick={() => handleImageChange("/menu/2.jpg")}
-                >
-                  Item 4
+                  About
                 </li>
               </ul>
               <section className="bg-red-700 h-full w-full fixed top-0 opacity-45 sm:static sm:w-[50%] sm:opacity-100">
