@@ -28,14 +28,17 @@ export default function App() {
           <Route index element={<CollectionsPage />} />
         </Route>
 
+
         <Route path="/product/:name" element={<ProductDetails />} />
+
+
       </Route>
       
     )
   );
   return (
     <DrinksProvider>
-      <RouterProvider router={router} />;
+      <RouterProvider router={router} />
     </DrinksProvider>
   );
 }
