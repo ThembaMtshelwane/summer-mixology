@@ -13,13 +13,15 @@ import {
 } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
+import ProductDetails from "./components/ProductSection/ProductDetails";
 
 export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />
-        <Route path="/single" element={<>single page </>} />
+        <Route path="/product/:name" element={<ProductDetails />} />
+        
       </Route>
     )
   );
