@@ -11,7 +11,7 @@ import HomePage from "./pages/HomePage";
 import ProductsLayout from "./layouts/ProductsLayout";
 import CollectionsPage from "./pages/CollectionsPage";
 import ProductDetails from "./components/ProductSection/ProductDetails";
-
+import CategoriesPage from "./pages/CategoriesPage";
 
 export default function App() {
   const router = createBrowserRouter(
@@ -23,6 +23,9 @@ export default function App() {
         <Route path="/products" element={<ProductsLayout />}>
           <Route index element={<CollectionsPage />} />
           <Route path="/products/:name" element={<ProductDetails />} />
+        </Route>
+        <Route path="/categories" element={<ProductsLayout />}>
+          <Route index element={<CategoriesPage />} />
         </Route>
       </Route>
     )
