@@ -1,9 +1,4 @@
-import About from "./components/About/About";
 import { DrinksProvider } from "./components/context/DrinksContext";
-import Hero from "./components/Hero/Hero";
-import ProductSection from "./components/ProductSection/ProductSection";
-import Footer from "./components/Footer/Footer";
-import Navbar from "./components/Hero/Navbar/Navbar";
 
 import {
   createBrowserRouter,
@@ -16,19 +11,22 @@ import HomePage from "./pages/HomePage";
 import ProductsLayout from "./layouts/ProductsLayout";
 import CollectionsPage from "./pages/CollectionsPage";
 import ProductDetails from "./components/ProductSection/ProductDetails";
+import CategoriesPage from "./pages/CategoriesPage";
 
 export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<MainLayout />}>
-        <Route index element={<HomePage />} />
-
+      <Route>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<HomePage />} />
+        </Route>
         <Route path="/products" element={<ProductsLayout />}>
           <Route index element={<CollectionsPage />} />
           <Route path="/products/:name" element={<ProductDetails />} />
         </Route>
-
-        <Route path="/product/:name" element={<ProductDetails />} />
+        <Route path="/categories" element={<ProductsLayout />}>
+          <Route index element={<CategoriesPage />} />
+        </Route>
       </Route>
     )
   );
