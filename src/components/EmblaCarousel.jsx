@@ -26,7 +26,7 @@ export function EmblaCarousel() {
           </section>
         </div>
 
-        <div className="embla__slide h-full w-full relative flex items-center justify-center md:justify-end">
+        <div className="embla__slide h-full w-full relative flex items-center justify-start ">
           <section className=" h-full w-full ">
             <img
               className="w-full h-full object-cover "
@@ -34,7 +34,7 @@ export function EmblaCarousel() {
               alt=""
             />
           </section>
-          <section className=" absolute w-full h-fit p-2 flex flex-col items-center justify-center sm:w-[600px] md:[600px]  md:left-32">
+          <section className=" absolute w-full h-fit p-2 flex flex-col items-center justify-center sm:w-[600px] md:[600px] md:left-20">
             <h1 className=" text-6xl uppercase text-center sm:text-7xl md:text-left md:text-8xl">
               Craft pro cocktails
             </h1>
@@ -44,19 +44,19 @@ export function EmblaCarousel() {
           </section>
         </div>
 
-        <div className="embla__slide border-2 border-yellow-400 h-full w-full relative flex items-center justify-center md:justify-end">
-          <section className="border-[10px] h-full w-full border-purple-700">
+        <div className="embla__slide h-full w-full relative flex items-start justify-center">
+          <section className="h-full w-full ">
             <img
               className="w-full h-full object-cover "
               src="hero/3.jpg"
               alt=""
             />
           </section>
-          <section className=" absolute w-full border-2 h-fit border-red-500 p-2 flex flex-col items-center justify-center sm:w-[600px] md:[600px]  md:left-32">
-            <h1 className=" text-6xl uppercase text-center sm:text-7xl md:text-left md:text-8xl">
+          <section className=" absolute w-full  h-fitp-2 flex flex-col top-[13vh] items-center justify-center sm:w-[700px]  ">
+            <h1 className=" text-6xl uppercase text-center sm:text-7xl md:text-8xl">
               from zero to the new bar hero
             </h1>
-            <button className="md:mr-auto my-4 bg-white border-none">
+            <button className="md:mx-auto my-4 bg-white border-none">
               <Link to="/products"> View Collection</Link>
             </button>
           </section>
