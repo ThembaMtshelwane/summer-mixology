@@ -9,7 +9,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const containerRef = useRef(null);
   console.log(toggle);
-  const [imageSrc, setImageSrc] = useState("/menu/6.jpg");
+  const [imageSrc, setImageSrc] = useState("/menu/1.jpg");
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleImageChange = (src) => {
@@ -89,7 +89,7 @@ const Navbar = () => {
                 <Link
                   to="/categories"
                   className="border-2 text-center py-5 mb-5 text-3xl font-bold text-white hover:scale-105 w-[80%] cursor-pointer"
-                  onMouseEnter={() => handleImageChange("/menu/1.jpg")}
+                  onMouseEnter={() => handleImageChange("/menu/6.jpg")}
                   onClick={() => setToggle(false)}
                 >
                   Categories
