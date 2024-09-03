@@ -12,11 +12,14 @@ import ProductsLayout from "./layouts/ProductsLayout";
 import CollectionsPage from "./pages/CollectionsPage";
 import ProductDetails from "./components/ProductSection/ProductDetails";
 import CategoriesPage from "./pages/CategoriesPage";
+import Background from "./components/Background";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route>
+        <Route path="/bg" element={<Background />} />
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePage />} />
         </Route>
@@ -32,7 +35,9 @@ export default function App() {
   );
   return (
     <DrinksProvider>
-      <RouterProvider router={router} />
+      <ParallaxProvider>
+        <RouterProvider router={router} />
+      </ParallaxProvider>
     </DrinksProvider>
   );
 }

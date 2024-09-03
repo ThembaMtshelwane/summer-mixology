@@ -5,12 +5,8 @@
 @layer components {
   html {
     scroll-behavior: smooth;
-    scrollbar-width: none;
   }
 
-  html::-webkit-scrollbar {
-    display: none;
-  }
   h1 {
     color: white;
   }
