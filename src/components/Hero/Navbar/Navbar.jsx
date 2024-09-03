@@ -37,9 +37,9 @@ const Navbar = () => {
       >
         <section className="w-[150px]">
           <img
-            src="/hero/1.jpg "
+            src="/logo/3270.svg"
             alt=""
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center scale-[0.8]"
           />
         </section>
         <section className="bg-blue-900 flex items-center justify-center  size-12 rounded-full">
