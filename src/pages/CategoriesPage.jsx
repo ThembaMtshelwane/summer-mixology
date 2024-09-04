@@ -43,13 +43,13 @@ const Categories = () => {
   }, []);
 
   return (
-    <div className="mx-auto p-6 text-center">
-      <button
+    <div className=" p-6 mx-16 px-5 mt-[77px] text-center">
+      {/* <button
         onClick={fetchCocktails} // Add onClick handler to fetch and categorize cocktails
         className="py-3 px-7 mb-2 mt-10 text-sm font-medium border border-red-950 hover:bg-[#002B49] hover:text-white"
       >
         REFRESH CATEGORIES
-      </button>
+      </button> */}
 
       {loading ? (
         <Spinner /> // Show loading message
@@ -58,7 +58,7 @@ const Categories = () => {
           {/* Display Cocktail Categories */}
           {Object.keys(cocktails).map((category) => (
             <div key={category}>
-              <h2 className="text-2xl font-bold mb-4 text-[#002B49]">
+              <h2 className="text-2xl font-bebas font-bold mb-4 text-[#002B49]">
                 {category}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10 ">
@@ -76,7 +76,7 @@ const Categories = () => {
                       alt={cocktail.strDrink}
                       className="w-full h-45 object-cover mb-4 rounded-md"
                     />
-                    <h4 className="text-lg font-bold mb-2">Ingredients:</h4>
+                    <h4 className="text-xl font-bold  font-bebas mb-2">Ingredients:</h4>
                     <ul className="text-left mb-4">
                       {Object.keys(cocktail)
                         .filter(
@@ -84,13 +84,13 @@ const Categories = () => {
                             key.includes("strIngredient") && cocktail[key]
                         )
                         .map((ingredientKey) => (
-                          <li key={ingredientKey} className="text-gray-700">
+                          <li key={ingredientKey} className=" font-oswald text-[#002B49]">
                             {cocktail[ingredientKey]}
                           </li>
                         ))}
                     </ul>
-                    <p className="text-left">
-                      <strong>Instructions:</strong> {cocktail.strInstructions}
+                    <p className="text-left text-[#002B49] font-oswald">
+                      <strong className="font-bebas">Instructions:</strong> {cocktail.strInstructions}
                     </p>
                   </Link>
                 ))}

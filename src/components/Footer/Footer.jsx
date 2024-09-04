@@ -30,9 +30,9 @@ const Footer = () => {
       </section>
 
       {/* Footer Bottom Section */}
-      <div className="bg-gray-200 text-center p-4">
+      <div className="bg-traansparent text-center p-4 text-white">
         © 2024 Copyright:
-        <a href="" className="text-[#002B49] hover:text-gray-900 font-semibold">
+        <a href="" className="text-white hover:text-gray-900 font-semibold">
           summermixiology.com
         </a>
       </div>

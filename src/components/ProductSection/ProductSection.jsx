@@ -30,7 +30,7 @@ const ProductSection = () => {
   const { drinks } = useDrinks();
 
   return (
-    <div className="w-full h-screen pt-[100px] pb-[20px] text-[#002B49]">
+    <div className="w-full h-screen relative pt-[100px] pb-[20px] text-[#002B49]">
       <div className="font-bold md:text-6xl text-5xl flex flex-wrap font-bebas justify-between gap-10 items-center">
         <h2>OUR COCKTAILS</h2>
         <button className="bg-transparent w-[200px] h-[45px] border font-oswald border-[#002B49] text-base hover:bg-[#002B49] hover:text-white font-medium">

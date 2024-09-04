@@ -41,8 +41,8 @@ function PaginatedItems({ itemsPerPage, drinks }) {
   };
 
   return (
-    <>
-      <ReactPaginate
+    <div className="mx-16 px-5 mt-[77px]">
+      {/* <ReactPaginate
         breakLabel="..."
         nextLabel="next >"
         onPageChange={handlePageClick}
@@ -55,7 +55,7 @@ function PaginatedItems({ itemsPerPage, drinks }) {
         previousClassName="px-3 py-1 border rounded"
         nextClassName="px-3 py-1 border rounded"
         pageClassName="px-3 py-1 border rounded hover:scale-[1.02] "
-      />
+      /> */}
       <Drinks currentDrinks={currentDrinks} />
       <ReactPaginate
         breakLabel="..."
@@ -71,7 +71,7 @@ function PaginatedItems({ itemsPerPage, drinks }) {
         nextClassName="px-3 py-1 border rounded"
         pageClassName="px-3 py-1 border rounded hover:scale-[1.02] "
       />
-    </>
+    </div>
   );
 }
 
@@ -82,7 +82,7 @@ const Drinks = ({ currentDrinks }) => {
         <Link
           to={`${drink.name}`}
           key={index}
-          className="w-full max-w-[600px] max-h-[8000px] h-full justify-self-center overflow-hidden bg-white rounded-lg"
+          className="w-full px-9 max-w-[600px] max-h-[8000px] h-full justify-self-center overflow-hidden border border-slate-800 bg-transparent rounded-lg"
         >
           <img
             src={drink.thumbnail}
@@ -90,10 +90,10 @@ const Drinks = ({ currentDrinks }) => {
             className=" object-cover object-center transition-transform duration-300 ease-out transform hover:scale-105"
           />
           <div className="pt-6 text-start text-gray-600 px-4">
-            <h2 className="font-light text-lg uppercase text-gray-600">
-              ORIGINAL
+            <h2 className="font-light font-oswald text-2xl uppercase text-gray-600">
+              {drink.category}
             </h2>
-            <h1 className="font-bold text-3xl mt-1 uppercase text-gray-600">
+            <h1 className="font-bold font-bebas  text-5xl mt-1 uppercase text-gray-600">
               {drink.name}
             </h1>
           </div>

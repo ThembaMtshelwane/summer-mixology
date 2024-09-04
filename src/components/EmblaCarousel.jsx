@@ -12,7 +12,7 @@ export function EmblaCarousel() {
           <section className=" h-full  w-full relative">
             <img
               className="w-full h-full object-cover "
-              src="hero/1.jpg"
+              src="/hero/1.jpg"
               alt=""
             />
           </section>
@@ -20,7 +20,7 @@ export function EmblaCarousel() {
             <h1 className=" text-6xl uppercase text-center sm:text-8xl md:text-right md:text-7xl font-bebas">
               the art of the cocktail
             </h1>
-            <button className="md:ml-auto my-4 text-base font-oswald bg-transparent text-white border-white">
+            <button className="md:ml-auto uppercase my-4 text-base font-oswald bg-transparent text-white border-white">
               <Link to="/products"> View Collection</Link>
             </button>
           </section>
@@ -30,7 +30,7 @@ export function EmblaCarousel() {
           <section className=" h-full w-full ">
             <img
               className="w-full h-full object-cover "
-              src="hero/2.jpg"
+              src="/hero/2.jpg"
               alt=""
             />
           </section>
@@ -38,7 +38,7 @@ export function EmblaCarousel() {
             <h1 className=" text-6xl uppercase sm:text-7xl md:text-left md:text-6xl font-bebas">
               Craft pro cocktails
             </h1>
-            <button className="md:mr-auto my-4 text-base font-oswald bg-transparent text-white border-white">
+            <button className="md:mr-auto my-4 text-base uppercase font-oswald bg-transparent text-white border-white">
               <Link to="/categories"> View Categories</Link>
             </button>
           </section>
@@ -48,15 +48,15 @@ export function EmblaCarousel() {
           <section className="h-full w-full ">
             <img
               className="w-full h-full object-cover "
-              src="hero/3.jpg"
+              src="/hero/3.jpg"
               alt=""
             />
           </section>
-          <section className=" absolute w-[20px]  h-fitp-2 flex   flex-col top-[20vh] items-center justify-center sm:w-[700px]  ">
-            <h1 className=" text-6xl uppercasepr-15 text-right sm:text-7xl md:text-6xl font-bebas">
+          <section className=" absolute w-[20px]  h-fitp-2 flex   flex-col top-[40vh] items-center justify-center sm:w-[700px]  ">
+            <h1 className=" text-6xl uppercasepr-15 text-right  sm:text-7xl md:text-6xl font-bebas">
               from zero to the new bar hero
             </h1>
-            <button className="md:mx-auto my-4 text-base font-oswald bg-transparent text-white border-white">
+            <button className="md:mx-auto my-4 text-base uppercase font-oswald bg-transparent text-white border-white">
               <Link to="/products"> View Collection</Link>
             </button>
           </section>

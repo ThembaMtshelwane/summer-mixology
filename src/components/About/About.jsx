@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div className="mx-auto p-6 text-center">
+    <div className="mx-auto relative mt-28 p-6 pt-14 text-center h-[110vh]">
       <div className="flex flex-col md:flex-row items-center">
         {/* Left Side Image */}
         <div className="md:w-2/3">
@@ -30,7 +30,7 @@ const About = () => {
             enthusiast, or just someone looking for the perfect drink recipe
             <br /> for a special occasion, our app has something for everyone.
           </p>
-          <button className="border-[#002B49] py-3 px-7 mb-2 mt-10 text-sm font-medium border font-oswald  hover:bg-[#002B49] hover:text-white">
+          <button className="border-[#002B49] py-3 px-7 bg-transparent mb-2 uppercase mt-10 text-sm font-medium border font-oswald  hover:bg-[#002B49] hover:text-white">
             <Link to="/categories"> View Categories</Link>
           </button>
         </div>

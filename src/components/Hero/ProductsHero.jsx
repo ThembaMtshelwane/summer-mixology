@@ -25,7 +25,7 @@ const ProductsHero = () => {
 
   return (
     <section
-      className="bg-blue-900 h-[75vh] flex flex-col justify-center items-center"
+      className="bg-blue-900 h-[85vh] flex flex-col justify-center items-center"
       style={{
         backgroundImage: "url('/hero/products/1.jpg')",
         backgroundSize: "cover",
@@ -34,12 +34,12 @@ const ProductsHero = () => {
     >
       <section className="top-0 w-full h-[70%] flex flex-col items-center justify-center p-5">
         {match && (
-          <h1 className="uppercase text-5xl text-[#173e59] font-semibold sm:text-7xl">
+          <h1 className="uppercase font-bebas text-7xl text-[#173e59] font-semibold sm:text-9xl">
             The collection
           </h1>
         )}
         {match2 && (
-          <h1 className="uppercase text-5xl text-[#173e59] font-semibold sm:text-7xl">
+          <h1 className="uppercase font-bebas text-7xl text-[#173e59] font-semibold sm:text-9xl">
             The Categories
           </h1>
         )}
