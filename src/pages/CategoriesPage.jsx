@@ -1,6 +1,7 @@
 // Categories.js
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Spinner from "../components/Spinner/Spinner";
 const Categories = () => {
   const [cocktails, setCocktails] = useState([]); // State to store cocktails
   const [loading, setLoading] = useState(false); // State to manage loading state
@@ -51,7 +52,7 @@ const Categories = () => {
       </button>
 
       {loading ? (
-        <p className="text-center mt-6">Loading...</p> // Show loading message
+        <Spinner /> // Show loading message
       ) : (
         <div>
           {/* Display Cocktail Categories */}
