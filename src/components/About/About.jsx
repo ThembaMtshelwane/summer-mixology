@@ -15,13 +15,13 @@ const About = () => {
 
         {/* Right Side Text */}
         <div className="md:w-2/3 md:pl-10 mt-6 md:mt-0">
-          <h3 className="text-2xl font-bold mb-4 text-center text-[#002B49]">
+          <h3 className="text-2xl font-bold mb-4 text-center font-oswald text-[#002B49]">
             -SUMMER MIXOLOGY-
           </h3>
-          <h1 className="text-6xl font-bold mb-4 text-[#002B49]">
+          <h1 className="text-7xl font-bebas font-bold mb-4 text-[#002B49]">
             HISTORICAL KNOW-HOW
           </h1>
-          <p className="text-lg mb-4">
+          <p className="text-lg mb-4 font-oswald">
             Welcome to our Cocktail Explorer App!
             <br /> Discover a world of cocktails and mocktails with just a few
             clicks.
@@ -30,7 +30,7 @@ const About = () => {
             enthusiast, or just someone looking for the perfect drink recipe
             <br /> for a special occasion, our app has something for everyone.
           </p>
-          <button className="py-3 px-7 mb-2 mt-10 text-sm font-medium border border-red-950 hover:bg-[#002B49] hover:text-white">
+          <button className="py-3 px-7 mb-2 mt-10 text-sm font-medium border font-oswald border-red-950 hover:bg-[#002B49] hover:text-white">
             <Link to="/categories"> View Categories</Link>
           </button>
         </div>

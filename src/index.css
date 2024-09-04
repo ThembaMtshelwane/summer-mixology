@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
+
 @layer components {
   html {
     scroll-behavior: smooth;
@@ -24,3 +28,6 @@
   flex: 0 0 100%;
   min-width: 0;
 }
+
+
+

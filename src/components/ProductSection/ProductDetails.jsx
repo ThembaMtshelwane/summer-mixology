@@ -17,8 +17,8 @@ const ProductDetails = () => {
 
   return (
     <>
-      <div className="relative w-full h-[60vh] bg-white overflow-hidden">
-        <div className="absolute inset-0 flex flex-col justify-center items-end text-[#002B49] z-10">
+      {/* <div className="relative w-full h-[60vh] bg-white overflow-hidden"> */}
+        <div className="absolute top-0 flex flex-col  text-[#002B49] ">
           <h2 className="text-xl font-normal text-center w-full">
             {category}
           </h2>
@@ -26,7 +26,7 @@ const ProductDetails = () => {
             {name}
           </h1>
         </div>
-      </div>
+      {/* </div> */}
 
       <div className="w-full">
         <img src={thumbnail} alt={thumbnail} className="w-full h-[70vh] object-cover"/>
