@@ -5,11 +5,11 @@ const About = () => {
     <div className="mx-auto p-6 text-center">
       <div className="flex flex-col md:flex-row items-center">
         {/* Left Side Image */}
-        <div className="md:w-1/3">
+        <div className="md:w-2/3">
           <img
             src="/About.jpeg"
             alt="About Us"
-            className="w-[100%] h-[100vh] object-cover shadow-lg mt-5" // Increased height for better visibility
+            className="w-[100%] h-[80vh] object-cover shadow-lg mt-5" 
           />
         </div>
 
@@ -21,7 +21,7 @@ const About = () => {
           <h1 className="text-7xl font-bebas font-bold mb-4 text-[#002B49]">
             HISTORICAL KNOW-HOW
           </h1>
-          <p className="text-lg mb-4 font-oswald">
+          <p className="text-lg mb-4 font-oswald text-[#002B49]">
             Welcome to our Cocktail Explorer App!
             <br /> Discover a world of cocktails and mocktails with just a few
             clicks.
@@ -30,7 +30,7 @@ const About = () => {
             enthusiast, or just someone looking for the perfect drink recipe
             <br /> for a special occasion, our app has something for everyone.
           </p>
-          <button className="py-3 px-7 mb-2 mt-10 text-sm font-medium border font-oswald border-red-950 hover:bg-[#002B49] hover:text-white">
+          <button className="border-[#002B49] py-3 px-7 mb-2 mt-10 text-sm font-medium border font-oswald  hover:bg-[#002B49] hover:text-white">
             <Link to="/categories"> View Categories</Link>
           </button>
         </div>
