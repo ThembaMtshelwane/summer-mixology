@@ -6,11 +6,13 @@ import Background from "../components/Background";
 
 const ProductsLayout = () => {
   return (
-    <section className="overflow-hidden relative">
+    <section className="relative min-h-screen overflow-hidden">
       <Navbar />
       <ProductsHero />
       <Background />
-      <Outlet />
+      <div className="relative z-10">
+        <Outlet />
+      </div>
     </section>
   );
 };
