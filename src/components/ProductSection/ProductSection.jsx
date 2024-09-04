@@ -31,9 +31,9 @@ const ProductSection = () => {
 
   return (
     <div className="w-full h-screen pt-[100px] pb-[20px] text-[#002B49]">
-      <div className="font-bold md:text-6xl text-5xl flex flex-wrap justify-between gap-10 items-center">
+      <div className="font-bold md:text-6xl text-5xl flex flex-wrap font-bebas justify-between gap-10 items-center">
         <h2>OUR COCKTAILS</h2>
-        <button className="bg-transparent w-[200px] h-[45px] border border-[#002B49] text-base hover:bg-[#002B49] hover:text-white font-medium">
+        <button className="bg-transparent w-[200px] h-[45px] border font-oswald border-[#002B49] text-base hover:bg-[#002B49] hover:text-white font-medium">
           <Link to="products"> ALL COCKTAILS</Link>
         </button>
       </div>
@@ -52,10 +52,10 @@ const ProductSection = () => {
                   className="md:max-w-[500px] max-w-[300px] md:h-[50vh] h-[50vh] object-cover"
                 />
                 <div className="pt-6 text-start text-gray-600">
-                  <h2 className="font-light text-lg uppercase text-gray-600">
+                  <h2 className="font-light font-oswald  text-lg uppercase text-gray-600">
                     {drink.category}
                   </h2>
-                  <h1 className="font-bold text-3xl mt-1 uppercase text-gray-600">
+                  <h1 className="font-bold font-bebas text-3xl mt-1 uppercase text-gray-600">
                     {drink.name}
                   </h1>
                 </div>
