@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useDrinks } from '../context/DrinksContext';
+import ProductSection from './ProductSection';
 
 const ProductDetails = () => {
   const { name } = useParams(); 
@@ -11,14 +12,13 @@ const ProductDetails = () => {
   const drink = drinks.find((drink) => drink.name === name);
 
   if (!drink) return <div>Product not found</div>;
-  console.log(drink)
 
   const { category, ingredients, instructions, thumbnail } = drink;
 
   return (
     <>
       <div className="relative w-full h-[60vh] bg-white overflow-hidden">
-        <div className="absolute inset-0 flex flex-col justify-center items-end text-[[#002B49]] z-10">
+        <div className="absolute inset-0 flex flex-col justify-center items-end text-[#002B49] z-10">
           <h2 className="text-xl font-normal text-center w-full">
             {category}
           </h2>
@@ -28,31 +28,37 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      <div className='w-full'>
-        <img src={thumbnail} alt={thumbnail} className='w-full h-[50vh] object-cover'/>
+      <div className="w-full">
+        <img src={thumbnail} alt={thumbnail} className="w-full h-[70vh] object-cover"/>
       </div>
 
-          <div className='flex'>
+      <div className="relative flex flex-col md:flex-row md:items-start w-full">
 
-              <div className='p-14 bg-[#002b49] w-[30vw] h-[50vh] '>
-                  <h1 className="text-5xl text-white font-bold mb-4">INGREDIENTS</h1>
-                  <ul className="flex-col text-white text-lg">
-                      {ingredients.map((item, index) => (
-                          <li key={index} className="text-lg">
-                              {item.measure} {item.ingredient}
-                          </li>
-                      ))}
-                  </ul>
-              </div>
+        {/* Ingredients Section */}
+        <div className="md:relative top-[-20px] md:top-[-60px] left-0 md:w-[40vw] w-full h-[60vh] p-14 bg-[#002b49]">
+          <h1 className="text-5xl text-white font-bold mb-4">INGREDIENTS</h1>
+          <ul className="flex-col text-white text-lg">
+            {ingredients.map((item, index) => (
+              <li key={index} className="text-lg">
+                {item.measure} {item.ingredient}
+              </li>
+            ))}
+          </ul>
+        </div>
 
-              <div className='p-16 w-[70vw] text-[#002b49]'>
-                  <h1 className="text-5xl font-bold mb-4 text-[#002b49]">PREPARATION</h1>
-                  <p className="text-lg">{instructions}</p>
-              </div>
+        {/* Preparation Section */}
+        <div className="relative md:w-[60vw] w-full md:pt-[8rem] pt-[8rem] md:pb-16 pb-8 p-8 bg-white text-[#002b49]">
+          <h1 className="text-5xl font-bold mb-4 text-[#002b49]">PREPARATION</h1>
+          <p className="text-lg">{instructions}</p>
+        </div>
+      </div>
 
-          </div>
 
 
+      <div className='mx-20'>
+        <ProductSection />
+      </div>
+      
     </>
   );
 };

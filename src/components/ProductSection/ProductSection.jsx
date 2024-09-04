@@ -65,14 +65,14 @@ const ProductSection = () => {
         </div>
       </div>
 
-      <button
+      {/* <button
         className={`embla__button embla__button--prev rounded absolute left-0 top-1/2 transform -translate-y-1/2 ${
           !prevBtnEnabled ? "disabled" : ""
         }`}
         onClick={scrollPrev}
         disabled={!prevBtnEnabled}
       >
-        &#x276E; {/* Left arrow symbol */}
+        &#x276E; 
       </button>
       <button
         className={`embla__button embla__button--next rounded-s-full border-black absolute right-0 top-1/2 transform -translate-y-1/2 ${
@@ -81,8 +81,8 @@ const ProductSection = () => {
         onClick={scrollNext}
         disabled={!nextBtnEnabled}
       >
-        &#x276F; {/* Right arrow symbol */}
-      </button>
+        &#x276F;
+      </button> */}
     </div>
   );
 };
