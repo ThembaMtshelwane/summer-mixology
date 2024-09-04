@@ -14,6 +14,7 @@ import ProductDetails from "./components/ProductSection/ProductDetails";
 import CategoriesPage from "./pages/CategoriesPage";
 import Background from "./components/Background";
 import { ParallaxProvider } from "react-scroll-parallax";
+import NotFoundPage from "./pages/NotFoundPage";
 
 export default function App() {
   const router = createBrowserRouter(
@@ -30,6 +31,7 @@ export default function App() {
         <Route path="/categories" element={<ProductsLayout />}>
           <Route index element={<CategoriesPage />} />
         </Route>
+        <Route path="/*" element={<NotFoundPage />} />
       </Route>
     )
   );

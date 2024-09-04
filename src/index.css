@@ -11,7 +11,7 @@
     color: white;
   }
   button {
-    @apply bg-transparent w-[200px] h-[45px] border border-[#002B49] text-base hover:bg-[#002B49] hover:text-white font-medium;
+    @apply bg-transparent w-[200px] h-[45px] border border-[#002B49] text-base hover:bg-[#002B49] bg-white hover:text-white font-medium;
   }
 }
 .embla {
