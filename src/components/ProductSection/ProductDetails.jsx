@@ -18,28 +18,29 @@ const ProductDetails = () => {
 
   return (
     <>
-      <div className="absolute w-full h-[60vh] bg-white overflow-hidden">
+      {/* <div className="absolute w-full h-[60vh] bg-white overflow-hidden">
         <h2 className="text-xl font-normal text-center w-full">{category}</h2>
         <h1 className="text-9xl font-normal text-center w-full text-gray-600">
           {name}
         </h1>
-      </div>
+      </div> */}
       {/* <div className="relative w-full h-[60vh] bg-white overflow-hidden"> */}
-      <div className="absolute top-0 flex flex-col  text-[#002B49] ">
+      {/* <div className="absolute top-0 flex flex-col  text-[#002B49] ">
         <h2 className="text-xl font-normal text-center w-full">{category}</h2>
         <h1 className="text-9xl font-normal text-center w-full text-gray-600">
           {name}
         </h1>
-      </div>
+      </div> */}
       {/* </div> */}
+      <div className="w-full h-[85vh] relative">
+  <img
+    src={thumbnail}
+    alt={thumbnail}
+    className="w-full h-full object-cover object-center"
+  />
+</div>
 
-      <div className="w-full">
-        <img
-          src={thumbnail}
-          alt={thumbnail}
-          className="w-full h-[70vh] object-cover"
-        />
-      </div>
+
 
       <div className="relative flex flex-col md:flex-row md:items-start w-full">
         {/* Ingredients Section */}
@@ -58,10 +59,10 @@ const ProductDetails = () => {
 
         {/* Preparation Section */}
         <div className="relative md:w-[60vw] w-full md:pt-[8rem] pt-[8rem] md:pb-16 pb-8 p-8 bg-white text-[#002b49]">
-          <h1 className="text-5xl font-bold mb-4 text-[#002b49]">
+          {/* <h1 className="text-5xl font-bold mb-4 text-[#002b49]">
             PREPARATION
           </h1>
-          <p className="text-lg">{instructions}</p>
+          <p className="text-lg">{instructions}</p> */}
           <h1 className="text-5xl font-bold mb-4 text-[#002b49] font-bebas">
             PREPARATION
           </h1>
@@ -69,9 +70,9 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      <div className="mx-20">
+      <div className="mx-20 mt-24">
         <ProductSection />
-      </div>
+      </div> 
     </>
   );
 };

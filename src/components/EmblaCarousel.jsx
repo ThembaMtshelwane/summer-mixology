@@ -34,8 +34,8 @@ export function EmblaCarousel() {
               alt=""
             />
           </section>
-          <section className=" absolute w-full h-fit p-2 flex flex-col items-center justify-center sm:w-[600px] md:[600px] md:left-20">
-            <h1 className=" text-6xl uppercase text-center sm:text-7xl md:text-left md:text-8xl font-bebas">
+          <section className=" absolute w-full h-fit p-2  flex flex-col  sm:w-[600px] md:[600px] md:left-20">
+            <h1 className=" text-6xl uppercase sm:text-7xl md:text-left md:text-6xl font-bebas">
               Craft pro cocktails
             </h1>
             <button className="md:mr-auto my-4 text-base font-oswald bg-transparent text-white border-white">
@@ -52,8 +52,8 @@ export function EmblaCarousel() {
               alt=""
             />
           </section>
-          <section className=" absolute w-full  h-fitp-2 flex flex-col top-[28vh] items-center justify-center sm:w-[700px]  ">
-            <h1 className=" text-6xl uppercase text-center sm:text-7xl md:text-9xl font-bebas">
+          <section className=" absolute w-[20px]  h-fitp-2 flex   flex-col top-[20vh] items-center justify-center sm:w-[700px]  ">
+            <h1 className=" text-6xl uppercasepr-15 text-right sm:text-7xl md:text-6xl font-bebas">
               from zero to the new bar hero
             </h1>
             <button className="md:mx-auto my-4 text-base font-oswald bg-transparent text-white border-white">
