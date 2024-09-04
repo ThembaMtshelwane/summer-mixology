@@ -3,6 +3,7 @@ import { useMatch } from "react-router-dom";
 const ProductsHero = () => {
   // const { name } = useParams();
   const match = useMatch("/products/");
+  const match2 = useMatch("/categories/");
   return (
     <section
       className="bg-blue-900 h-[70vh] flex flex-col justify-center items-center"
@@ -16,6 +17,13 @@ const ProductsHero = () => {
         {match ? (
           <h1 className="uppercase text-5xl text-[#173e59] font-semibold sm:text-7xl">
             The collection
+          </h1>
+        ) : (
+          ""
+        )}
+        {match2 ? (
+          <h1 className="uppercase text-5xl text-[#173e59] font-semibold sm:text-7xl">
+            The Categories
           </h1>
         ) : (
           ""
