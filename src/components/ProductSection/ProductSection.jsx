@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { useDrinks } from "../context/DrinksContext";
 import { Link } from "react-router-dom";
+import ProductCard from "./ProductCard";
 
 const ProductSection = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -42,25 +43,34 @@ const ProductSection = () => {
         className="embla w-full overflow-hidden relative pt-[80px]"
         ref={emblaRef}
       >
-        <div className="embla__container flex gap-10">
+        <div className="embla__container flex gap-10 ">
           {drinks.slice(0, 4).map((drink, index) => (
-            <Link to={`/products/${drink.name}`} key={index}>
-              <div className="h-[90vh]">
-                <img
-                  src={drink.thumbnail}
-                  alt={drink.name}
-                  className="md:max-w-[500px] max-w-[300px] md:h-[50vh] h-[50vh] object-cover"
-                />
-                <div className="pt-6 text-start text-gray-600">
-                  <h2 className="font-light font-oswald  text-lg uppercase text-gray-600">
-                    {drink.category}
-                  </h2>
-                  <h1 className="font-bold font-bebas text-3xl mt-1 uppercase text-gray-600">
-                    {drink.name}
-                  </h1>
-                </div>
-              </div>
-            </Link>
+            // <Link
+            //   to={`/products/${drink.name}`}
+            //   key={index}
+            //   onClick={() => {
+            //     window.scrollTo({
+            //       top: 0,
+            //     });
+            //   }}
+            // >
+            //   <div className="h-[90vh]">
+            //     <img
+            //       src={drink.thumbnail}
+            //       alt={drink.name}
+            //       className="md:max-w-[500px] max-w-[300px] md:h-[50vh] h-[50vh] object-cover"
+            //     />
+            //     <div className="pt-6 text-start text-gray-600">
+            //       <h2 className="font-light font-oswald  text-lg uppercase text-gray-600">
+            //         {drink.category}
+            //       </h2>
+            //       <h1 className="font-bold font-bebas text-3xl mt-1 uppercase text-gray-600">
+            //         {drink.name}
+            //       </h1>
+            //     </div>
+            //   </div>
+            // </Link>
+            <ProductCard key={index} index={index} drink={drink} />
           ))}
         </div>
       </div>

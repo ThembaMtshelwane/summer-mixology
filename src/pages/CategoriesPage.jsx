@@ -43,7 +43,7 @@ const Categories = () => {
   }, []);
 
   return (
-    <div className=" p-6 mx-16 px-5 mt-[77px] text-center">
+    <div className=" p-4 -mx-1.5 px-2 mt-[77px] text-center min-h-screen">
       {/* <button
         onClick={fetchCocktails} // Add onClick handler to fetch and categorize cocktails
         className="py-3 px-7 mb-2 mt-10 text-sm font-medium border border-red-950 hover:bg-[#002B49] hover:text-white"
@@ -61,12 +61,17 @@ const Categories = () => {
               <h2 className="text-2xl font-bebas font-bold mb-4 text-[#002B49]">
                 {category}
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10 ">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10 justify-center w-[80%] mx-auto">
                 {cocktails[category].map((cocktail) => (
                   <Link
                     to={`/products/${cocktail.strDrink}`}
+                    onClick={() => {
+                      window.scrollTo({
+                        top: 0,
+                      });
+                    }}
                     key={cocktail.idDrink}mn
-                    className="p-4 border rounded-lg shadow-lg"
+                    className="border rounded-lg shadow-lg overflow-hidden"
                   >
                     <h3 className="text-xl font-bold mb-2">
                       {cocktail.strDrink}
@@ -74,23 +79,29 @@ const Categories = () => {
                     <img
                       src={cocktail.strDrinkThumb}
                       alt={cocktail.strDrink}
-                      className="w-full h-45 object-cover mb-4 rounded-md"
+                      className="w-full h-45 object-cover mb-4 transition-transform duration-300 ease-out transform hover:scale-105"
                     />
-                    <h4 className="text-xl font-bold  font-bebas mb-2">Ingredients:</h4>
-                    <ul className="text-left mb-4">
+                    <h4 className="text-xl font-bold  font-bebas mb-2 px-4">
+                      Ingredients:
+                    </h4>
+                    <ul className="text-left mb-4 px-4">
                       {Object.keys(cocktail)
                         .filter(
                           (key) =>
                             key.includes("strIngredient") && cocktail[key]
                         )
                         .map((ingredientKey) => (
-                          <li key={ingredientKey} className=" font-oswald text-[#002B49]">
+                          <li
+                            key={ingredientKey}
+                            className=" font-oswald text-[#002B49]"
+                          >
                             {cocktail[ingredientKey]}
                           </li>
                         ))}
                     </ul>
-                    <p className="text-left text-[#002B49] font-oswald">
-                      <strong className="font-bebas">Instructions:</strong> {cocktail.strInstructions}
+                    <p className="text-left text-[#002B49] font-oswald px-4 pb-4">
+                      <strong className="font-bebas">Instructions:</strong>{" "}
+                      {cocktail.strInstructions}
                     </p>
                   </Link>
                 ))}

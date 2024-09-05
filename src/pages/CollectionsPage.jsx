@@ -2,6 +2,7 @@ import { useDrinks } from "../components/context/DrinksContext";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import ReactPaginate from "react-paginate";
+import ProductCard from "../components/ProductSection/ProductCard";
 
 const CollectionsPage = () => {
   const { drinks } = useDrinks();
@@ -33,6 +34,9 @@ function PaginatedItems({ itemsPerPage, drinks }) {
 
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
+    window.scrollTo({
+      top: 0,
+    });
     const newOffset = (event.selected * itemsPerPage) % drinks.length;
     console.log(
       `User requested page number ${event.selected}, which is offset ${newOffset}`
@@ -41,35 +45,22 @@ function PaginatedItems({ itemsPerPage, drinks }) {
   };
 
   return (
-    <div className="mx-16 px-5 mt-[77px]">
-      {/* <ReactPaginate
-        breakLabel="..."
-        nextLabel="next >"
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
-        pageCount={pageCount}
-        previousLabel="< previous"
-        renderOnZeroPageCount={null}
-        containerClassName="flex justify-center mt-10 space-x-2"
-        activeClassName="bg-[#173e59] text-white"
-        previousClassName="px-3 py-1 border rounded"
-        nextClassName="px-3 py-1 border rounded"
-        pageClassName="px-3 py-1 border rounded hover:scale-[1.02] "
-      /> */}
+    <div className="mx-16 px-5 mt-[77px] relative" id="collection">
       <Drinks currentDrinks={currentDrinks} />
       <ReactPaginate
         breakLabel="..."
-        nextLabel="next >"
+        nextLabel=" >"
         onPageChange={handlePageClick}
         pageRangeDisplayed={5}
         pageCount={pageCount}
-        previousLabel="< previous"
+        previousLabel="<"
         renderOnZeroPageCount={null}
         containerClassName="flex justify-center my-10 space-x-2"
         activeClassName="bg-[#173e59] text-white"
         previousClassName="px-3 py-1 border rounded"
-        nextClassName="px-3 py-1 border rounded"
-        pageClassName="px-3 py-1 border rounded hover:scale-[1.02] "
+        nextClassName="px-3 py-1 border rounded "
+        pageClassName="px-3 py-1 border my-auto rounded hover:scale-[1.02] "
+        className=""
       />
     </div>
   );
@@ -79,25 +70,26 @@ const Drinks = ({ currentDrinks }) => {
   return (
     <section className=" min-h-screen grid gap-10 justify-center py-20 sm:px-5 sm:grid-cols-2 ">
       {currentDrinks.map((drink, index) => (
-        <Link
-          to={`${drink.name}`}
-          key={index}
-          className="w-full px-9 max-w-[600px] max-h-[8000px] h-full justify-self-center overflow-hidden border border-slate-800 bg-transparent rounded-lg"
-        >
-          <img
-            src={drink.thumbnail}
-            alt="image"
-            className=" object-cover object-center transition-transform duration-300 ease-out transform hover:scale-105"
-          />
-          <div className="pt-6 text-start text-gray-600 px-4">
-            <h2 className="font-light font-oswald text-2xl uppercase text-gray-600">
-              {drink.category}
-            </h2>
-            <h1 className="font-bold font-bebas  text-5xl mt-1 uppercase text-gray-600">
-              {drink.name}
-            </h1>
-          </div>
-        </Link>
+        // <Link
+        //   to={`${drink.name}`}
+        //   key={index}
+        //   className="w-full  max-w-[600px] max-h-[8000px] h-full justify-self-center overflow-hidden bg-transparent border-2 border-[#173e59]"
+        // >
+        //   <img
+        //     src={drink.thumbnail}
+        //     alt="image"
+        //     className=" object-cover object-center transition-transform duration-300 ease-out transform hover:scale-105"
+        //   />
+        //   <div className="pt-6 text-start text-gray-600 px-4">
+        //     <h2 className="font-light font-oswald text-2xl uppercase text-gray-600">
+        //       {drink.category}
+        //     </h2>
+        //     <h1 className="font-bold font-bebas  text-5xl mt-1 uppercase text-gray-600">
+        //       {drink.name}
+        //     </h1>
+        //   </div>
+        // </Link>
+        <ProductCard key={index} index={index} drink={drink} />
       ))}
     </section>
   );
