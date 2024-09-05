@@ -1,11 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const ProductCard = ({ drink, index }) => {
+  const navigate = useNavigate();
   return (
-    <Link
-      to={`${drink.name}`}
+    <div
+      onClick={() => {
+        navigate(`/products/${drink.name}`);
+        window.scrollTo({
+          top: 0,
+        });
+      }}
       key={index}
-      className="w-full min-w-[350px] max-w-[600px] max-h-[8000px] justify-self-center overflow-hidden bg-transparent shadow-lg rounded-lg "
+      className="cursor-pointer w-full min-w-[350px] max-w-[600px] max-h-[8000px] justify-self-center overflow-hidden bg-transparent shadow-lg rounded-lg "
     >
       <img
         src={drink.thumbnail}
@@ -20,7 +26,7 @@ const ProductCard = ({ drink, index }) => {
           {drink.name}
         </h1>
       </div>
-    </Link>
+    </div>
   );
 };
 

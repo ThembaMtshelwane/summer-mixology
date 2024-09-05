@@ -17,13 +17,14 @@ export function EmblaCarousel() {
               alt=""
             />
           </section>
-          <motion.section className="absolute w-full  p-2 px-5 flex flex-col items-center justify-center sm:w-[500px]  md:mr-[15%]"
-                  initial={{ opacity: 0, y: 25, }}
-                  whileInView={{ opacity: 1, y: 0, }}
-                  transition={{ duration: 1, delay: 1, }}
+          <motion.section
+            className="absolute w-full  p-2 px-5 flex flex-col items-center justify-center sm:w-[500px]  md:mr-[15%]"
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1 }}
           >
             <h1 className=" text-6xl uppercase text-center sm:text-8xl md:text-right md:text-7xl font-bebas">
-              the art of the cocktail
+              the art of cocktails
             </h1>
             <button className="md:ml-auto uppercase my-4 text-base font-oswald bg-transparent text-white border-white">
               <Link to="/products"> View Collection</Link>
@@ -39,10 +40,12 @@ export function EmblaCarousel() {
               alt=""
             />
           </section>
-          <motion.section className=" absolute w-full h-fit p-2  flex flex-col  sm:w-[600px] md:[600px] md:left-20"
-                  initial={{ opacity: 0, y: 25, }}
-                  whileInView={{ opacity: 1, y: 0, }}
-                  transition={{ duration: 1, delay: 1, }}>
+          <motion.section
+            className=" absolute w-full h-fit p-2  flex flex-col  sm:w-[600px] md:[600px] md:left-20"
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1 }}
+          >
             <h1 className=" text-6xl uppercase sm:text-7xl md:text-left md:text-6xl font-bebas">
               Craft pro cocktails
             </h1>

@@ -1,5 +1,5 @@
-import React from 'react';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import React from "react";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Footer = () => {
   return (
@@ -13,11 +13,11 @@ const Footer = () => {
                 SUMMER-MIXIOLOGY
               </h6>
               <p className="text-white text-5xl text-center">
-                THE ART OF THE <br/> FRENCH COCKTAIL
+                THE ART OF <br /> COCKTAILS
               </p>
               <p className="py-4 text-white">FOLLOW</p>
               <div className="flex justify-center">
-                <a href="#" className="mr-4 text-white hover:text-[#002b49] ">
+                <a href="" className="mr-4 text-white hover:text-[#002b49] ">
                   <i className="fab fa-facebook-f"></i>
                 </a>
                 <a href="#" className="mr-4 text-white hover:text-[#002b49] ">
@@ -41,7 +41,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
-
-

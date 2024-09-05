@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const containerRef = useRef(null);
-  console.log(toggle);
   const [imageSrc, setImageSrc] = useState("/menu/1.jpg");
   const [isScrolled, setIsScrolled] = useState(false);
 
