@@ -43,7 +43,7 @@ const Categories = () => {
   }, []);
 
   return (
-    <div className=" p-6 mx-16 px-5 mt-[77px] text-center">
+    <div className=" p-4 -mx-1.5 px-2 mt-[77px] text-center">
       {/* <button
         onClick={fetchCocktails} // Add onClick handler to fetch and categorize cocktails
         className="py-3 px-7 mb-2 mt-10 text-sm font-medium border border-red-950 hover:bg-[#002B49] hover:text-white"
