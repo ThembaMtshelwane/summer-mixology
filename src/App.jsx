@@ -19,7 +19,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import NotFoundPage from "./pages/NotFoundPage";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Hero/Navbar/Navbar";
-import MainBackground from "./components/MainBackground";
+// import MainBackground from "./components/MainBackground";
 
 export default function App() {
   return (
@@ -30,7 +30,7 @@ export default function App() {
             <Navbar />
 
             <Routes>
-              <Route path="/main" element={<MainBackground />} />
+              {/* <Route path="/main" element={<MainBackground />} /> */}
               <Route path="/bg" element={<Background />} />
 
               <Route path="/" element={<MainLayout />}>
