@@ -25,7 +25,7 @@ const ProductsHero = () => {
 
   return (
     <section
-      className="bg-blue-900 h-[85vh] flex flex-col justify-center items-center"
+      className="bg-blue-900 h-[85vh] flex flex-col opacity-90 justify-center items-center"
       style={{
         backgroundImage: "url('/hero/products/1.jpg')",
         backgroundSize: "cover",

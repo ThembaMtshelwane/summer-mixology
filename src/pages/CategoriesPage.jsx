@@ -65,7 +65,7 @@ const Categories = () => {
                 {cocktails[category].map((cocktail) => (
                   <Link
                     to={`/products/${cocktail.strDrink}`}
-                    key={cocktail.idDrink}
+                    key={cocktail.idDrink}mn
                     className="p-4 border rounded-lg shadow-lg"
                   >
                     <h3 className="text-xl font-bold mb-2">
