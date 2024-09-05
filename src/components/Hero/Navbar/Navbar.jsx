@@ -43,7 +43,7 @@ const Navbar = () => {
           <img
             src="/logo/logo.svg"
             alt=""
-            className="w-full h-full object-cover object-center underline hover:scale-125-[0.8]"
+            className="w-full h-full object-cover object-center underline scale-[0.6] hover:scale-[0.8]"
           />
         </Link>
         <div className="flex">

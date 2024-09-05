@@ -71,7 +71,7 @@ const Categories = () => {
                       });
                     }}
                     key={cocktail.idDrink}
-                    className="border rounded-lg shadow-lg"
+                    className="border rounded-lg shadow-lg overflow-hidden"
                   >
                     <h3 className="text-xl font-bold mb-2">
                       {cocktail.strDrink}
@@ -79,7 +79,7 @@ const Categories = () => {
                     <img
                       src={cocktail.strDrinkThumb}
                       alt={cocktail.strDrink}
-                      className="w-full h-45 object-cover mb-4 rounded-md"
+                      className="w-full h-45 object-cover mb-4 transition-transform duration-300 ease-out transform hover:scale-105"
                     />
                     <h4 className="text-xl font-bold  font-bebas mb-2 px-4">
                       Ingredients:
