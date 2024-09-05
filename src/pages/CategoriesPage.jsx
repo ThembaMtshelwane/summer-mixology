@@ -70,7 +70,7 @@ const Categories = () => {
                         top: 0,
                       });
                     }}
-                    key={cocktail.idDrink}
+                    key={cocktail.idDrink}mn
                     className="border rounded-lg shadow-lg overflow-hidden"
                   >
                     <h3 className="text-xl font-bold mb-2">

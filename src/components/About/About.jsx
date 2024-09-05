@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="mx-auto relative mt-28 p-6 pt-14 text-center h-[110vh]">
+    <motion.div className="mx-auto relative mt-28 p-6 pt-14 text-center h-[110vh]"
+    initial={{ opacity: 0, x: 25, }}
+    whileInView={{ opacity: 1, y: 0, }}
+    transition={{ duration: 1, delay: 1, }}>
       <div className="flex flex-col md:flex-row items-center">
         {/* Left Side Image */}
         <div className="md:w-2/3">
@@ -35,7 +39,7 @@ const About = () => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
