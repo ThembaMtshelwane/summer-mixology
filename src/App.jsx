@@ -2,8 +2,8 @@ import { DrinksProvider } from "./components/context/DrinksContext";
 
 import {
   BrowserRouter as Router,
-  Routes
-  ,createBrowserRouter,
+  Routes,
+  createBrowserRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
@@ -19,47 +19,42 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import NotFoundPage from "./pages/NotFoundPage";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Hero/Navbar/Navbar";
+import MainBackground from "./components/MainBackground";
 
 export default function App() {
-
-  return(
+  return (
     <>
       <DrinksProvider>
-      <ParallaxProvider>
-        <Router>
+        <ParallaxProvider>
+          <Router>
+            <Navbar />
 
-          <Navbar />
+            <Routes>
+              <Route path="/main" element={<MainBackground />} />
+              <Route path="/bg" element={<Background />} />
 
-        <Routes>
-            <Route path="/bg" element={<Background />} />
+              <Route path="/" element={<MainLayout />}>
+                <Route index element={<HomePage />} />
+              </Route>
 
-            <Route path="/" element={<MainLayout />}>
-              <Route index element={<HomePage />} />
-            </Route>
+              <Route path="/products" element={<ProductsLayout />}>
+                <Route index element={<CollectionsPage />} />
+                <Route path="/products/:name" element={<ProductDetails />} />
+              </Route>
 
-            <Route path="/products" element={<ProductsLayout />}>
-              <Route index element={<CollectionsPage />} />
-              <Route path="/products/:name" element={<ProductDetails />} />
-            </Route>
+              <Route path="/categories" element={<ProductsLayout />}>
+                <Route index element={<CategoriesPage />} />
+              </Route>
 
-            <Route path="/categories" element={<ProductsLayout />}>
-              <Route index element={<CategoriesPage />} />
-            </Route>
+              <Route path="/*" element={<NotFoundPage />} />
+            </Routes>
 
-            <Route path="/*" element={<NotFoundPage />} />
-
-        </Routes>
-
-          <Footer />
-          
-        </Router>
+            <Footer />
+          </Router>
         </ParallaxProvider>
       </DrinksProvider>
-
     </>
-  )
-
-
+  );
 
   // const router = createBrowserRouter(
   //   createRoutesFromElements(
@@ -77,7 +72,6 @@ export default function App() {
   //       </Route>
   //       <Route path="/*" element={<NotFoundPage />} />
 
-       
   //     </Route>
   //   )
   // );

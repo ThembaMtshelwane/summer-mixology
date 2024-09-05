@@ -7,7 +7,7 @@ const NotFoundPage = () => {
       <Navbar />
 
       <section
-        className="border-2 border-green-400 h-full w-full flex items-center justify-center blur-sm absolute "
+        className=" h-full w-full flex items-center justify-center blur-sm absolute "
         style={{
           backgroundImage: "url('/not-found/1.png')",
           backgroundPosition: "center",

@@ -5,11 +5,10 @@ import Background from "../components/Background";
 import Footer from "../components/Footer/Footer";
 const MainLayout = () => {
   return (
-    <section className="overflow-hidden relative">
-      {/* <Navbar /> */}
+    <section className="overflow-hidden relative min-h-screen">
       <Hero />
       <Background />
-      {/* <Footer /> */}
+
       <Outlet />
     </section>
   );

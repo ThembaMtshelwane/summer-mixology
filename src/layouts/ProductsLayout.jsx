@@ -10,7 +10,7 @@ const ProductsLayout = () => {
       <Navbar />
       <ProductsHero />
       <Background />
-      <div className="relative z-10">
+      <div className="relative z-10 min-h-screen">
         <Outlet />
       </div>
     </section>
