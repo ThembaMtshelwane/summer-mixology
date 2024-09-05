@@ -44,7 +44,15 @@ const ProductSection = () => {
       >
         <div className="embla__container flex gap-10">
           {drinks.slice(0, 4).map((drink, index) => (
-            <Link to={`/products/${drink.name}`} key={index}>
+            <Link
+              to={`/products/${drink.name}`}
+              key={index}
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                });
+              }}
+            >
               <div className="h-[90vh]">
                 <img
                   src={drink.thumbnail}

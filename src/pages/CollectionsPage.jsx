@@ -33,6 +33,9 @@ function PaginatedItems({ itemsPerPage, drinks }) {
 
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
+    window.scrollTo({
+      top: 0,
+    });
     const newOffset = (event.selected * itemsPerPage) % drinks.length;
     console.log(
       `User requested page number ${event.selected}, which is offset ${newOffset}`
@@ -41,35 +44,22 @@ function PaginatedItems({ itemsPerPage, drinks }) {
   };
 
   return (
-    <div className="mx-16 px-5 mt-[77px]">
-      {/* <ReactPaginate
-        breakLabel="..."
-        nextLabel="next >"
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
-        pageCount={pageCount}
-        previousLabel="< previous"
-        renderOnZeroPageCount={null}
-        containerClassName="flex justify-center mt-10 space-x-2"
-        activeClassName="bg-[#173e59] text-white"
-        previousClassName="px-3 py-1 border rounded"
-        nextClassName="px-3 py-1 border rounded"
-        pageClassName="px-3 py-1 border rounded hover:scale-[1.02] "
-      /> */}
+    <div className="mx-16 px-5 mt-[77px] relative" id="collection">
       <Drinks currentDrinks={currentDrinks} />
       <ReactPaginate
         breakLabel="..."
-        nextLabel="next >"
+        nextLabel=" >"
         onPageChange={handlePageClick}
         pageRangeDisplayed={5}
         pageCount={pageCount}
-        previousLabel="< previous"
+        previousLabel="<"
         renderOnZeroPageCount={null}
         containerClassName="flex justify-center my-10 space-x-2"
         activeClassName="bg-[#173e59] text-white"
         previousClassName="px-3 py-1 border rounded"
-        nextClassName="px-3 py-1 border rounded"
-        pageClassName="px-3 py-1 border rounded hover:scale-[1.02] "
+        nextClassName="px-3 py-1 border rounded "
+        pageClassName="px-3 py-1 border my-auto rounded hover:scale-[1.02] "
+        className=""
       />
     </div>
   );

@@ -47,28 +47,29 @@ const Navbar = () => {
           />
         </Link>
         <div className="flex">
-          <p className="items-center justify-center text-center mt-3 mr-3 text-white font-oswald font-extralight">Menu</p>
-        <section className="bg-blue-900 flex items-center justify-center  size-12 rounded-full">
-          {toggle ? (
-            <IoMdClose
-              className="underline hover:scale-125-125 text-2xl font-extranormal text-white cursor-pointer"
-              onClick={() => setToggle((prevState) => !prevState)}
-            />
-          ) : (
-            <RxHamburgerMenu
-              className="underline hover:scale-125-125 text-2xl font-extranormal text-white cursor-pointer"
-              onClick={() => setToggle((prevState) => !prevState)}
-            />
-          )}
-        </section>
+          <p className="items-center justify-center text-center mt-3 mr-3 text-white font-oswald font-extralight">
+            Menu
+          </p>
+          <section className="bg-blue-900 flex items-center justify-center  size-12 rounded-full">
+            {toggle ? (
+              <IoMdClose
+                className="underline hover:scale-125-125 text-2xl font-extranormal text-white cursor-pointer"
+                onClick={() => setToggle((prevState) => !prevState)}
+              />
+            ) : (
+              <RxHamburgerMenu
+                className="underline hover:scale-125-125 text-2xl font-extranormal text-white cursor-pointer"
+                onClick={() => setToggle((prevState) => !prevState)}
+              />
+            )}
+          </section>
         </div>
-       
       </section>
       <Slide
         in={toggle}
         container={containerRef.current}
         timeout={500}
-        className="fixed  left-0 top-0 h-screen bg-[#173e59] bg-opacity-90  w-full z-40 "
+        className="fixed  left-0 top-0 h-screen bg-[#173e59]   w-full z-40 "
       >
         <section className=" font-bebas border-yellow-600">
           <section className="flex flex-col max-h-[85vh]  mt-[15vh]">
@@ -107,8 +108,7 @@ const Navbar = () => {
                   About
                 </Link>
 
-                
-              <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center">
                   <a href="#" className="mr-4 text-white hover:text-[#002b49] ">
                     <i className="fab fa-facebook-f"></i>
                   </a>
@@ -116,24 +116,15 @@ const Navbar = () => {
                     <i className="fab fa-instagram "></i>
                   </a>
                 </div>
-
               </ul>
 
-
-              
               <section className="bg-red-700 h-[115vh] w-full fixed top-0 opacity-45 sm:relative sm:top-[-15vh] sm:w-[50%] sm:opacity-100">
                 <img
                   src={imageSrc}
                   alt=""
                   className="h-full w-full object-cover object-center"
                 />
-
-                
-                
               </section>
-
-
-              
             </section>
           </section>
         </section>

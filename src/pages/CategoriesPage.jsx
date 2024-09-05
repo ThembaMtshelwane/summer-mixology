@@ -65,6 +65,11 @@ const Categories = () => {
                 {cocktails[category].map((cocktail) => (
                   <Link
                     to={`/products/${cocktail.strDrink}`}
+                    onClick={() => {
+                      window.scrollTo({
+                        top: 0,
+                      });
+                    }}
                     key={cocktail.idDrink}
                     className="p-4 border rounded-lg shadow-lg"
                   >
@@ -76,7 +81,9 @@ const Categories = () => {
                       alt={cocktail.strDrink}
                       className="w-full h-45 object-cover mb-4 rounded-md"
                     />
-                    <h4 className="text-xl font-bold  font-bebas mb-2">Ingredients:</h4>
+                    <h4 className="text-xl font-bold  font-bebas mb-2">
+                      Ingredients:
+                    </h4>
                     <ul className="text-left mb-4">
                       {Object.keys(cocktail)
                         .filter(
@@ -84,13 +91,17 @@ const Categories = () => {
                             key.includes("strIngredient") && cocktail[key]
                         )
                         .map((ingredientKey) => (
-                          <li key={ingredientKey} className=" font-oswald text-[#002B49]">
+                          <li
+                            key={ingredientKey}
+                            className=" font-oswald text-[#002B49]"
+                          >
                             {cocktail[ingredientKey]}
                           </li>
                         ))}
                     </ul>
                     <p className="text-left text-[#002B49] font-oswald">
-                      <strong className="font-bebas">Instructions:</strong> {cocktail.strInstructions}
+                      <strong className="font-bebas">Instructions:</strong>{" "}
+                      {cocktail.strInstructions}
                     </p>
                   </Link>
                 ))}
