@@ -33,14 +33,12 @@ const ProductDetails = () => {
       </div> */}
       {/* </div> */}
       <div className="w-full h-[85vh] relative">
-  <img
-    src={thumbnail}
-    alt={thumbnail}
-    className="w-full h-full object-cover object-center"
-  />
-</div>
-
-
+        <img
+          src={thumbnail}
+          alt={thumbnail}
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
 
       <div className="relative flex flex-col md:flex-row md:items-start w-full">
         {/* Ingredients Section */}
@@ -70,9 +68,9 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      <div className="mx-20 mt-24">
+      <div className="">
         <ProductSection />
-      </div> 
+      </div>
     </>
   );
 };

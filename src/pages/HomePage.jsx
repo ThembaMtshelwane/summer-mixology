@@ -3,7 +3,7 @@ import ProductSection from "../components/ProductSection/ProductSection";
 
 const HomePage = () => {
   return (
-    <section className="mx-[30px]">
+    <section className="md:px-10 lg:px-15">
       <About />
       <ProductSection />
     </section>

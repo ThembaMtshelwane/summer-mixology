@@ -3,24 +3,24 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <motion.div
-      className="mx-auto relative mt-28 p-6 pt-14 text-center h-[110vh]"
-      initial={{ opacity: 0, x: 25 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: 1 }}
+    <div
+      className="relative mt-28  pt-14 text-center min-h-screen w-full"
+      // initial={{ opacity: 0, x: -25 }}
+      // whileInView={{ opacity: 1, y: 0 }}
+      // transition={{ duration: 1, delay: 1 }}
     >
-      <div className="flex flex-col md:flex-row items-center">
+      <div className="flex flex-col md:flex-row md:items-center w-full">
         {/* Left Side Image */}
         <div className="md:w-2/3">
           <img
             src="/About.jpeg"
             alt="About Us"
-            className="w-[100%] h-[80vh] object-cover shadow-lg mt-5"
+            className="w-[100%] h-[80vh] object-cover shadow-lg mt-5 "
           />
         </div>
 
         {/* Right Side Text */}
-        <div className="md:w-2/3 md:pl-10 mt-6 md:mt-0">
+        <div className="md:w-2/3  md:pl-10 mt-6 md:mt-0">
           <h3 className="text-2xl font-bold mb-4 text-center font-oswald text-[#002B49]">
             -SUMMER MIXOLOGY-
           </h3>
@@ -41,7 +41,7 @@ const About = () => {
           </button>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
