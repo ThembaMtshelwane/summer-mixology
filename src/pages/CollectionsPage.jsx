@@ -52,11 +52,12 @@ function PaginatedItems({ itemsPerPage, drinks }) {
         pageCount={pageCount}
         previousLabel="<"
         renderOnZeroPageCount={null}
-        containerClassName="flex justify-center my-10 space-x-2"
-        activeClassName="bg-[#173e59] text-white"
-        previousClassName="px-3 py-1 border rounded"
-        nextClassName="px-3 py-1 border rounded "
-        pageClassName="px-3 py-1 border my-auto rounded hover:scale-[1.02] "
+        containerClassName="flex justify-center my-10 gap-2"
+        activeLinkClassName="bg-[#173e59] text-white rounded"
+        previousLinkClassName="px-3 py-1 border rounded   hover:bg-[#173e59] hover:text-white "
+        nextLinkClassName="px-3 py-1 border rounded   hover:bg-[#173e59] hover:text-white "
+        pageLinkClassName="px-3 py-1 border my-auto rounded hover:bg-[#173e59] hover:text-white "
+        disabledLinkClassName="cursor-not-allowed  hover:bg-transparent hover:text-black "
       />
     </div>
   );
