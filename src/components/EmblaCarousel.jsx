@@ -63,8 +63,8 @@ export function EmblaCarousel() {
               alt=""
             />
           </section>
-          <section className=" absolute w-[20px]  h-fitp-2 flex   flex-col top-[40vh] items-center justify-center sm:w-[700px]  ">
-            <h1 className=" text-6xl uppercasepr-15 text-right  sm:text-7xl md:text-6xl font-bebas">
+          <section className=" absolute w-full  h-fitp-2 flex flex-col top-[40vh] items-center justify-center sm:w-[700px]  ">
+            <h1 className=" text-6xl uppercase pr-15 text-center  sm:text-7xl md:text-6xl font-bebas">
               from zero to the new bar hero
             </h1>
             <button className="md:mx-auto my-4 text-base uppercase font-oswald bg-transparent text-white border-white">
