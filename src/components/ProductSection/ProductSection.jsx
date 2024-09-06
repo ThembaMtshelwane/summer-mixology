@@ -7,7 +7,7 @@ import ProductCard from "./ProductCard";
 const ProductSection = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
-    align: "center",
+    // align: "center",
   });
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
@@ -31,7 +31,7 @@ const ProductSection = () => {
   const { drinks } = useDrinks();
 
   return (
-    <div className="w-full h-screen relative pt-[100px] pb-[20px] text-[#002B49]">
+    <div className=" min-h-screen relative pt-[100px] pb-[20px] text-[#002B49]  px-5 ">
       <div className="font-bold md:text-6xl text-5xl flex flex-wrap font-bebas justify-between gap-10 items-center">
         <h2>OUR COCKTAILS</h2>
         <button className="bg-transparent w-[200px] h-[45px] border font-oswald border-[#002B49] text-base hover:bg-[#002B49] hover:text-white font-medium">
@@ -43,7 +43,7 @@ const ProductSection = () => {
         className="embla w-full overflow-hidden relative pt-[80px]"
         ref={emblaRef}
       >
-        <div className="embla__container flex gap-10 ">
+        <div className="embla__container flex gap-10">
           {drinks.slice(0, 4).map((drink, index) => (
             // <Link
             //   to={`/products/${drink.name}`}

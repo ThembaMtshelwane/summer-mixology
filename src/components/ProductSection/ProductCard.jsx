@@ -11,7 +11,7 @@ const ProductCard = ({ drink, index }) => {
         });
       }}
       key={index}
-      className="cursor-pointer w-full min-w-[350px] max-w-[600px] max-h-[8000px] justify-self-center overflow-hidden bg-transparent shadow-lg rounded-lg "
+      className=" cursor-pointer w-full min-w-[300px] max-w-[600px] max-h-[8000px] justify-self-center overflow-hidden bg-transparent shadow-lg rounded-lg "
     >
       <img
         src={drink.thumbnail}

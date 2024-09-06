@@ -38,14 +38,11 @@ function PaginatedItems({ itemsPerPage, drinks }) {
       top: 0,
     });
     const newOffset = (event.selected * itemsPerPage) % drinks.length;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`
-    );
     setItemOffset(newOffset);
   };
 
   return (
-    <div className="mx-16 px-5 mt-[77px] relative" id="collection">
+    <div className="mx-16 px-5 mt-[77px] relative">
       <Drinks currentDrinks={currentDrinks} />
       <ReactPaginate
         breakLabel="..."
@@ -60,7 +57,6 @@ function PaginatedItems({ itemsPerPage, drinks }) {
         previousClassName="px-3 py-1 border rounded"
         nextClassName="px-3 py-1 border rounded "
         pageClassName="px-3 py-1 border my-auto rounded hover:scale-[1.02] "
-        className=""
       />
     </div>
   );
