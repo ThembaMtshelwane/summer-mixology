@@ -10,16 +10,27 @@ const Navbar = () => {
   const containerRef = useRef(null);
   const [imageSrc, setImageSrc] = useState("/menu/1.jpg");
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
 
   const handleImageChange = (src) => {
     setImageSrc(src);
   };
 
   useEffect(() => {
+    let lastScrollTop = 0;
     const handleScroll = () => {
       const scrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
+      // Show navbar if scrolling up, hide if scrolling down
+      if (scrollTop > lastScrollTop) {
+        setShowNavbar(false);
+      } else {
+        setShowNavbar(true);
+      }
+
+      // Set the background color if scrolled
       setIsScrolled(scrollTop > 0);
+      lastScrollTop = scrollTop;
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -33,10 +44,8 @@ const Navbar = () => {
     <section className="">
       <section
         className={`fixed z-50 w-full h-[15vh] flex justify-between p-5 items-center sm:px-7 md:p-14 lg:p-14 transition-colors duration-300 ${
-          toggle ? "bg-transparent" : ""
-        } 
-        ${isScrolled ? "bg-[#173e59] " : "bg-transparent"}
-        `}
+          isScrolled ? "bg-[#173e59]" : "bg-transparent"
+        } ${showNavbar ? "opacity-100" : "opacity-0 pointer-events-none"}`}
       >
         <Link to="/" className="w-[150px]" onClick={() => setToggle(false)}>
           <img
